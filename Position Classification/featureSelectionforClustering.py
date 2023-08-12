@@ -3,32 +3,16 @@ Author: William Gemba
 
 This is a file to perform Data Mining Tasks of the cleaned FIFA 18 Player Data Set.
 
+Python 3.8.6
 """
 import os
-import numpy as np
-import scipy as sp
-import scipy.cluster.hierarchy as shc
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 import seaborn as sns
-import plotly.offline as py
-import plotly.graph_objs as go
-from plotly import tools
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+from plotly.offline import init_notebook_mode
 import plotly.io as pio
 import cufflinks as cf
 import warnings
-import sklearn as skl
-from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, mean_squared_error, r2_score
-from sklearn.decomposition import PCA
-from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
-from sklearn import preprocessing
-from adjustText import adjust_text
-import statistics as stat
 
 warnings.filterwarnings('ignore')
 
