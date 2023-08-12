@@ -33,8 +33,8 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', -1)
 
-os.chdir('C:/Users/willi/Documents/Data Science Practice Projects/Fordham Projects/Data_Mining_Final_Project_Clustering_Classification/')
-df = pd.read_csv('Project_v2/FIFA18playerdata_CLEANED_featurereduc.csv', index_col='Name')
+os.chdir('<Insert PATH Here')
+df = pd.read_csv('FIFA18playerdata_CLEANED_featurereduc.csv', index_col='Name')
 
 print(df.head())
 print(df.info())
@@ -123,7 +123,7 @@ del df_withClusters['Hierachical_Clustering_AVG']
 
 print(df_withClusters)
 
-#df_withClusters.to_csv(r'C:/Users/willi/Documents/1 - FORDHAM/GRADUATE/Academic/CISC 5790 - Data Mining/Final Project/Project_v2/FIFA18playerdata_CLEANED_top250Players_HierarchicalAVG_postreduc.csv', index = True)
+#df_withClusters.to_csv(r'<Insert PATH Here>/FIFA18playerdata_CLEANED_top250Players_HierarchicalAVG_postreduc.csv', index = True)
 
 # Visualize feature variance by cluster
 
