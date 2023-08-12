@@ -21,7 +21,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', -1)
 
-os.chdir('C:/Users/willi/Documents/Data Science Practice Projects/Fordham Projects/Data_Mining_Final_Project_Clustering_Classification/')
+os.chdir('<Insert PATH Here>')
 data = pd.read_csv('FIFA18playerdata.csv')
 
 """ View data"""
@@ -190,4 +190,4 @@ data.values = data.values.str.replace(' ', '')
 
 ### Export to CSV ###
 
-#data.to_csv(r'<Insert Path Here>/FIFA18playerdata_CLEANED.csv', index = False)
+#data.to_csv(r'<Insert PATH Here>/FIFA18playerdata_CLEANED.csv', index = False)
