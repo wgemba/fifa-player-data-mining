@@ -25,7 +25,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', -1)
 
-os.chdir('C:/Users/willi/Documents/Data Science Practice Projects/Fordham Projects/Data_Mining_Final_Project_Clustering_Classification/')
+os.chdir('<Insert PATH Here>')
 data = pd.read_csv('FIFA18playerdata_CLEANED.csv')
 
 data.head()
@@ -73,6 +73,6 @@ topplayers = data1[data1['Overall'] >= 85]
 print('\nResulting Data Frame: \n', topplayers)
 
 ### Export to CSV
-#topplayers.to_csv(r'C:/Users/willi/Documents/1 - FORDHAM/GRADUATE/Academic/CISC 5790 - Data Mining/Final Project/FIFA18playerdata_CLEANED_topPlayers.csv', index = False)
+#topplayers.to_csv(r'<Insert PATH Here', index = False)
 
 #data1.drop(columns=['Position Grouping'], inplace=True)
