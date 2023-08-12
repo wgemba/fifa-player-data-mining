@@ -32,8 +32,8 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', -1)
 
-os.chdir('C:/Users/willi/Documents/Data Science Practice Projects/Fordham Projects/Data_Mining_Final_Project_Clustering_Classification/')
-df = pd.read_csv('Project_v2/FIFA18playerdata_CLEANED_featurereduc.csv', index_col='Name')
+os.chdir('<Insert PATH Here>')
+df = pd.read_csv('FIFA18playerdata_CLEANED_featurereduc.csv', index_col='Name')
 
 df.head()
 df.info()
