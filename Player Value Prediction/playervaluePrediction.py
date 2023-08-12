@@ -25,7 +25,7 @@ def formatInt(val):
     val = int(val)
     return val
 
-os.chdir('C:/Users/willi/Documents/Data Science Practice Projects/Fordham Projects/Data_Mining_Final_Project_Clustering_Classification/')
+os.chdir('<Insert PATH Here')
 df = pd.read_csv('FIFA18playerdata_CLEANED.csv', index_col='Name')
 
 df.head()
