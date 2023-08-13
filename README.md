@@ -6,9 +6,19 @@ For the classification tasks, four classification techniques were utilized: Deci
 
 For the prediction tasks, multiple linear regression is employed and is evaluated by the Root Mean Square Error (RSME) and R2 - score metrics. The goal of this project is to be able to derive insight into whether the players are (a) played in the correct position and (b) if they are overvalued or undervalued in the transfer market.
 
-## Background of the Data Set
+## How to use the files
+### Data Cleaning & Preprocessing
+Provided in this repository is the raw data set, 'FIFA18playerdata.csv'. The directory called 'Data Cleaning & Preprocessing' contains the file 'cleandata.py'. This file reads in the raw data set and performs preliminary data preprocessing, creating an output CSV file called 'FIFA18playerdata_CLEANED.csv'. This is the file that is used as input for the player value prediction and player position clustering algorithms.
+
+### Player Value Prediction
+The directory 'Player Value Prediction' contains the file 'playervaluePrediction.py', The file reads in the cleaned file 'FIFA18playerdata_CLEANED.csv'.
+
+### Position Classification
+The directory 'Position Classification' contains multiple clustering algorithms, as well as one feature selection algorithm and one file to perform final classification tasks. There are four files that perform agglomerative hierarchical clustering (one for each method: average, max, min, ward). There is also one file one file for kMeans Clustering algorithm. Based on the results of the runs of agglomerative hierarchical clustering algorithms, I selected the best performing one and exported a file that included the predicted position grouping clusters. I also exported the same file from the kMeans clustering algorithm. The export files of those two algorithms are used as inputs in the classificationAlgos.py file, which compares the results of classification with and without an intermediate clustering step.   
+
+## Background of the data set
 The dataset used for this project was originally derived from the 2018 installment of the EA Sports FIFA video game
-franchise, FIFA 19. The FIFA franchise is a special licensing agreement between the world governing body of soccer the Fédération Internationale de Football Association (FIFA) and game developer Electronic Arts (EA). New installments of this franchise are released every year and much of the development is built upon the collection of real-life player data by a team of 6,000 volunteer scouts.
+franchise, FIFA 19, and was sourced from Kaggle.com. The FIFA franchise is a special licensing agreement between the world governing body of soccer the Fédération Internationale de Football Association (FIFA) and game developer Electronic Arts (EA). New installments of this franchise are released every year and much of the development is built upon the collection of real-life player data by a team of 6,000 volunteer scouts.
 
 The dataset itself contains 18,207 instances and 89 features. The features include physical attributes (height, weight, body type, preferred foot, etc.), mental attributes (work rate, composure, aggression, etc.), and skill attributes ranging from finishing to agility and dribbling. All together this data set included a comprehensive list of attributes for each player. This data set also included many attributes that were not useful for the project, such as picture hyperlinks, which were removed.
 
