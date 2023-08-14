@@ -26,7 +26,18 @@ Initially the data set was split between 45 discrete and 44 numerical attributes
 
 After the removal of redundant features, the transformation of data to numeric values, and the removal of null values; the resulting data frame contained 18,147 instances and 78 features. This was only but the first stage of preprocessing and this data frame would be the basis for which all further algorithms. Depending on the algorithm, further steps of feature selection were required
 
-## IV. Position Classification Methodology
+## IV. Raw data Visualizations
+Below are some preliminary data visualizations of the raw data distributions created to gain an understanding of existing class imbalances.
+
+![newplot](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/f3912844-27ab-4908-910c-68e8c3e99e37)
+![newplot](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/69d88eb9-ed68-4289-a011-1ae77bb423fb)
+![newplot](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/d7291239-d2e7-41a3-8173-21383eaa4c1d)
+![newplot](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/f7bc8c79-1eda-42c7-9a19-2b01cae12347)
+![newplot (1)](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/5adac949-03dd-404c-97d9-2d92578f3256)
+![newplot (1)](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/970fdc2b-12da-4851-8aa5-461f1dde67d5)
+![newplot (1)](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/5535a541-a92b-4ae1-af0a-ca13b96f9c22)
+
+## V. Position Classification Methodology
 ### A. Algorithms
 For positional classification, I employed four classification algorithms from Python’s scikit-learn (sklearn) library: the Decision Tree Classifier, the Random Forest Classifier, the Gaussian Naïve Bayes Classifier, and the k – Nearest Neighbor algorithm. This experiment aims to compare the classification results on the measured positions from the data set against the clustering groups determined by clustering algorithms. The clustering algorithms used are k – Means Clustering and Group Average Agglomerative Hierarchical Clustering.
 
