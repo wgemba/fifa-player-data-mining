@@ -1,4 +1,4 @@
-# Classification and Prediction Tasks on FIFA 18 Player Data
+# Classification and Prediction Tasks on FIFA 19 Player Data
 ## I. Abstract
 This project explores the uses of data mining techniques to derive useful non-trivial information from a dataset of FIFA-registered professional soccer players. Two principal tasks are explored: (1) the classification of players by their position and (2) the prediction of each player’s market value. 
 
@@ -83,7 +83,7 @@ In order to predict player market value, I employed three different models: mult
 ### B. Preparation and Setup Methodology
 To perform this task, I utilized a few different methods of preparing the data set to be run by the linear regression algorithm. The data frame used was the one generated after the initial preprocessing and cleanup stage discussed in part II of this paper.
 
-For training the models, I decided to train and test them using 80/20, 66/33, and 50/50 splits, ultimately comparing the results of each. The first model run is on the full dataset with no feature selection. As mentioned previously, goalkeepers fundamentally have different attributes in this data set. As such, under the 26 numeric position attributes which are recorded for each outfield player, goalkeepers have zero values. The same holds true for outfield players and their goalkeeping attributes. With this is mind, as part of my experiment I separate the data set into outfield player and goalkeeping player data frames and run linear regression on them separately, aggregating the results after the fact. Across three different training/testing splits and three linear regression models per split, I ran nine different regression models.
+For training the models, I decided to train and test them using 80/20, 66/33, and 50/50 splits, ultimately comparing the results of each. The first model run is on the full dataset with no feature selection. As mentioned previously, goalkeepers fundamentally have different attributes in this data set. As such, under the 26 numeric position attributes which are recorded for each outfield player, goalkeepers have zero values. The same holds true for outfield players and their goalkeeping attributes. With this is mind, as part of my experiment I separate the data set into outfield player and goalkeeping player data frames and run regression on them separately, aggregating the results after the fact. Once identifying the best train/test split, I ran each model with and without feature reduction.
 
 ### C. Evaluation Metrics
 To evaluate the results of each regression model, I utilized two metrics: Root Mean Square Error (RMSE) and the R-squared score. The RMSE metric served as insight into how far apart the predicted valuations and measured valuations were on average. The R-squared metric helped me understand how well the models fit the data sets. Additionally, after running each model and producing the metric scores mentioned above, I also printed out a small sample of players and compared the predicted values to the measured values; using my domain knowledge to determine if the predicted values were reasonable.
@@ -112,6 +112,18 @@ Upon making this decision, I compared the predicted values with the measured val
 ![image](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/933d24e9-b6d9-4778-935e-54de940b646e)
 
 ![image](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/f32b8918-98dc-447f-953d-ad7431826914)
+
+For the outfield players I ran each algorithm with an without feature reduction. The results can be seen below:
+
+![image](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/143d8ccb-7c5c-4165-990e-81bcb042aa42)
+
+As is demonstrated, the best performing algorithm is the gradient boosting regression algortihm without feature reduction. After training the model, I ran it again using the entire data set in order to compare to the observed market values from the original data. The result metrics can be seen below as well as the first 16 samples (Figure VI.). 
+
+![image](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/d3cdbcf2-4124-4135-94c7-3cf3dbd9cbf9)
+
+Figure VI.
+
+![image](https://github.com/wgemba/fifa-player-data-mining/assets/134420287/e2dbed1b-cca1-4d4e-9231-65e9155f771c)
 
 ## VII. Conclusion
 In this project I explored a few applications of data mining techniques for the purposes of accurately classifying soccer players based on their positions, as well as accurately
