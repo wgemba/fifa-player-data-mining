@@ -39,7 +39,7 @@ def pos_numerize(val):
     else:
         return 3
 
-os.chdir('C:/Users/willi/Documents/Data Science Practice Projects/Fordham Projects/Data_Mining_Final_Project_Clustering_Classification/')
+os.chdir('<Insert PATH Here>')
 
 data = pd.read_csv('FIFA18playerdata_CLEANED.csv', index_col='Name')
 
