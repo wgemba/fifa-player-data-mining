@@ -1,4 +1,4 @@
-# Classification and Prediction Tasks on FIFA 19 Player Data
+# Regression and Classification of Professional Soccer Players
 ## I. Abstract
 This project explores the uses of data mining techniques to derive useful non-trivial information from a dataset of FIFA-registered professional soccer players. Two principal tasks are explored: (1) the classification of players by their position and (2) the prediction of each player’s market value. 
 
